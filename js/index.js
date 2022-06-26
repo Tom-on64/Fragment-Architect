@@ -18,12 +18,14 @@ document.addEventListener("keyup", keyUp)
 
 function keyDown(event) {
     if (event.keyCode == 40) {
-        player.dir = "up"
+        player.dir = "down"
         downPressed = true
     }
-    if (event.keyCode == 38) {
-        player.dir = "down"
+    if (event.keyCode == 38 || event.keyCode == 32) {
         upPressed = true
+    }
+    if (event.keyCode == 16) {
+        player.dir = "up"
     }
     if (event.keyCode == 37) {
         player.dir = "left"
@@ -38,7 +40,7 @@ function keyUp(event) {
     if (event.keyCode == 40) {
         downPressed = false
     }
-    if (event.keyCode == 38) {
+    if (event.keyCode == 38 || event.keyCode == 32) {
         upPressed = false
     }
     if (event.keyCode == 37) {
@@ -61,7 +63,7 @@ function inputs() {
     }
 }
 
-function boundryCheck () {
+function boundryCheck() {
     // Up
     if (player.y < player.radius) {
         player.y = player.radius
@@ -121,7 +123,7 @@ class Player {
             ctx.lineWidth = 1.5
             ctx.beginPath()
             ctx.moveTo(this.x, this.y)
-            ctx.lineTo(this.x, this.y + 100)
+            ctx.lineTo(this.x, this.y - 100)
             ctx.stroke()
         }
         else if (this.dir == "down") {
@@ -129,7 +131,7 @@ class Player {
             ctx.lineWidth = 1.5
             ctx.beginPath()
             ctx.moveTo(this.x, this.y)
-            ctx.lineTo(this.x, this.y - 100)
+            ctx.lineTo(this.x, this.y + 100)
             ctx.stroke()
         }
     }
