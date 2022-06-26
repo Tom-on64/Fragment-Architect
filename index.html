@@ -9,7 +9,16 @@
 </head>
 <body>
     <!-- Project -->
+    
     <canvas id="mainScreen"></canvas>
+    <button onClick="getElementById('controlls').style.display = 'block'">O</button><br>
+    <div id="controlls">
+    <b>Controlls</b><br>
+    &nbsp&nbsp<button onClick="upPressed=true; downPressed=false; leftPressed=false;rightPressed=false; player.dir='up'">&#x25B2</button><br>
+    <button onClick="upPressed=false; downPressed=false; leftPressed=true;rightPressed=false; player.dir='left'">&#x25C0</button>
+    <button onClick="upPressed=false; downPressed=true; leftPressed=false;rightPressed=false; player.dir='down'">&#x25BC</button>
+    <button onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=true; player.dir='right'">&#x25B6</button><br>
+    &nbsp&nbsp<button onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=false">o</button></div>
     <script src="./js/index.js"></script>
 </body>
 </html>
