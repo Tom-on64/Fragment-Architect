@@ -14,11 +14,13 @@ body {
 }
 
 #mainScreen {
-    width: 95%;
-    height: 95%;
-    border: 4px solid black;
+    display: none;
 }
 
 #controlls {
     display: none;
+}
+
+#warning {
+    display: block;
 }

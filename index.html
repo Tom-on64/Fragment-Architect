@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link media="only screen and (max-width: 420px)" href="styles/mobilePortrait.css" type="text/css" rel="stylesheet">
+    <link media="only screen and (min-width: 421px) and (max-width: 680px)" href="styles/mobileLandscape.css" type="text/css" rel="stylesheet">
+    <link media="only screen and (min-device-width: 681px)" href="styles/desktop.css" type="text/css" rel="stylesheet">
     <title>Fragment Architect</title>
 </head>
 <body>
     <!-- Project -->
-    
-    <canvas id="mainScreen"></canvas>
-    <button onClick="getElementById('controlls').style.display = 'block'">O</button><br>
+
     <div id="controlls">
-    <b>Controlls</b><br>
-    &nbsp&nbsp<button onClick="upPressed=true; downPressed=false; leftPressed=false;rightPressed=false; player.dir='up'">&#x25B2</button><br>
-    <button onClick="upPressed=false; downPressed=false; leftPressed=true;rightPressed=false; player.dir='left'">&#x25C0</button>
-    <button onClick="upPressed=false; downPressed=true; leftPressed=false;rightPressed=false; player.dir='down'">&#x25BC</button>
-    <button onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=true; player.dir='right'">&#x25B6</button><br>
-    &nbsp&nbsp<button onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=false">o</button></div>
+        <b>Controlls</b><br>
+        &nbsp&nbsp<button
+            onClick="upPressed=true; downPressed=false; leftPressed=false;rightPressed=false; player.dir='up'">&#x25B2</button><br>
+        <button
+            onClick="upPressed=false; downPressed=false; leftPressed=true;rightPressed=false; player.dir='left'">&#x25C0</button>
+        <button onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=false">&nbspo&nbsp</button>
+        <button
+            onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=true; player.dir='right'">&#x25B6</button><br>
+        &nbsp&nbsp<button
+            onClick="upPressed=false; downPressed=true; leftPressed=false;rightPressed=false; player.dir='down'">&#x25BC</button>
+    </div>
+
+    <canvas id="mainScreen"></canvas>
+
+    <div id="warning">
+        <p>Turn your device to play!</p>
+    </div>
+    <!-- Script -->
     <script src="./js/index.js"></script>
 </body>
 </html>

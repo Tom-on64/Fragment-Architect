@@ -9,6 +9,7 @@ You can move with arrows and look up with shift\
 ---
 
 ## Todo-list
+- Add a world
 - Add textures
 - Add more blocks
 - Title screen and world creation ui

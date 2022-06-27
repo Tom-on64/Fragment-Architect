@@ -6,11 +6,10 @@ canvas.width = canvasBoundingBox.width
 canvas.height = canvasBoundingBox.height
 
 // Variables
-downPressed = false
-upPressed = false
-leftPressed = false
-rightPressed = false
-
+var downPressed = false
+var upPressed = false
+var leftPressed = false
+var rightPressed = false
 
 // Functions
 document.addEventListener("keydown", keyDown)
@@ -54,6 +53,7 @@ function keyUp(event) {
 function inputs() {
     if (upPressed == true & player.y >= world.ground - player.radius) {
         player.y -= player.speed * 20
+        upPressed = false
     }
     if (leftPressed == true) {
         player.x -= player.speed
@@ -136,7 +136,6 @@ class Player {
         }
     }
 }
-const player = new Player()
 
 // World
 class World {
@@ -150,7 +149,10 @@ class World {
         ctx.fillRect(this.x, this.y, canvas.width, canvas.height)
     }
 }
+
 const world = new World()
+const player = new Player()
+
 // Render
 function render() {
     canvasBoundingBox = canvas.getBoundingClientRect()
