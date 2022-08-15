@@ -1,3 +1,5 @@
+import TileMap from "./TileMap.js"
+
 // DOM
 const canvas = document.getElementById("mainScreen")
 const ctx = canvas.getContext("2d")
@@ -10,6 +12,18 @@ var downPressed = false
 var upPressed = false
 var leftPressed = false
 var rightPressed = false
+var tileSize = 21
+
+const map = [
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+  [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+  [0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 
+  [2,2,2,2,2,0,0,0,0,0,0,0,0,0,0,2,2], 
+  [1,1,1,1,1,2,2,0,0,0,0,2,2,2,2,1,1], 
+  [1,1,1,1,1,1,1,2,2,2,2,1,1,1,1,1,1], 
+  [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+]
 
 // Functions
 document.addEventListener("keydown", keyDown)
@@ -152,6 +166,7 @@ class World {
 
 const world = new World()
 const player = new Player()
+const TileMap = new TileMap(tileSize, map)
 
 // Render
 function render() {
@@ -163,8 +178,9 @@ function render() {
     boundryCheck()
     ctx.fillStyle = "lightblue"
     ctx.fillRect(0, 0, canvas.width, canvas.height)
-    world.draw()
-    player.draw()
+    // world.draw()
+    // player.draw()
+    TileMap
     requestAnimationFrame(render)
 }
 
