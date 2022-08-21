@@ -12,25 +12,12 @@
 <body>
     <!-- Project -->
 
-    <div id="controlls">
-        <b>Controlls</b><br>
-        &nbsp&nbsp<button
-            onClick="upPressed=true; downPressed=false; leftPressed=false;rightPressed=false; player.dir='up'">&#x25B2</button><br>
-        <button
-            onClick="upPressed=false; downPressed=false; leftPressed=true;rightPressed=false; player.dir='left'">&#x25C0</button>
-        <button onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=false">&nbspo&nbsp</button>
-        <button
-            onClick="upPressed=false; downPressed=false; leftPressed=false;rightPressed=true; player.dir='right'">&#x25B6</button><br>
-        &nbsp&nbsp<button
-            onClick="upPressed=false; downPressed=true; leftPressed=false;rightPressed=false; player.dir='down'">&#x25BC</button>
-    </div>
-
     <canvas id="mainScreen"></canvas>
 
     <div id="warning">
         <p>Turn your device to play!</p>
     </div>
     <!-- Script -->
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 </html>

@@ -4,14 +4,13 @@
 ### How to play?
 You can play the game [HERE](https://tom-on64.github.io/Fragment-Architect/)
 
-You can move with arrows and look up with shift\
+You can move with arrows
 
 ---
 
 ## Todo-list
-- Add a world
-- Add textures
-- Add more blocks
-- Title screen and world creation ui
-- Add survival
-- Add random generation
+- ~~Add Textures~~
+- ~~Add Tilemap~~
+- ~~Add Gravity~~
+- Add **Good** Movement
+- Add Non-static World
